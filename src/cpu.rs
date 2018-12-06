@@ -6,7 +6,7 @@ use rand::distributions::{IndependentSample, Range};
 pub const PROGRAM_START: u16 = 0x200; // Maybe
 
 pub struct Cpu{
-    vx:         [u8; 4], // number of regesters
+    vx:         [u8; 5], // number of regesters
     pc:         u16,
     i:          u16,
     ret_stack:  Vec<u16>,
