@@ -6,16 +6,14 @@ pub struct Chip {
     ram: Ram,
     bus: Bus,
     cpu: Cpu,
-    chip: String,
 }
 
 impl Chip {
-    pub fn new(chip: String) -> Chip {
+    pub fn new() -> Chip {
         Chip {
             ram: Ram::new(),
             bus: Bus::new(),
             cpu: Cpu::new(),
-            chip,
         }
     }
 

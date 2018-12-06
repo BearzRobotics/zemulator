@@ -13,6 +13,8 @@ mod chip;
 mod bus;
 mod display;
 
+use crate::chip::Chip;
+
 // let set up are screen size
 const WIDTH : usize = 640;
 const HEIGHT: usize = 320;
@@ -39,5 +41,13 @@ fn main() {
     ).unwrap_or_else(|e| {
         panic!("Widnow Create failed: {:?}", e);
     });
+
+    let mut chip = Chip::new();
+    chip.load_rom(&data);
+
+    loop{
+        chip.run_instruction();
+    }
+
 
 }

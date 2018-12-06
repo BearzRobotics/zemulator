@@ -1,7 +1,6 @@
 
 pub struct Ram {
     // moved it to 1,000,000 to have 1mb of memory and so on
-     //  4096 4kb defualt for chip 8 emulator
     mem: [u8; 5_000_000], 
 }
 
@@ -9,6 +8,7 @@ impl Ram {
     pub fn new() -> Ram {
         let mut ram = Ram { mem: [0; 5_000_000] };
 
+        // an example of preloading stuff into memeory
         let sprites: [[u8; 5]; 16] = [
             [0xF0, 0x90, 0x90, 0x90, 0xF0],
             [0x20, 0x60, 0x20, 0x20, 0x70],
