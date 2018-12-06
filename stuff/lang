@@ -1,0 +1,32 @@
+asm lang Rules
++--------------------------+
+|Direction of Operands     |
++--------------------------+
+| Instr source, dest       |
++--------------------------+
+| SDTS, 0001b;             |
++--------------------------+
+
+
+Base register are in closed in '[' and ']'
+
+Numbers are go with:
+None != decimal
+0x    = hex
+0b    = binary
+0o    = octal
+
+
+
+
+
+SDTS, 0001;
+STRA;
+STRB;
+SDTS, 000a;
+STRC;
+ADD;
+SALS;
+STRA;
+JMPH, 0005, 20;
+HLT;
