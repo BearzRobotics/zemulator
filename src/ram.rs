@@ -1,12 +1,13 @@
 
 pub struct Ram {
     // moved it to 1,000,000 to have 1mb of memory and so on
-    mem: [u8; 5_000_000], 
+    // apparntly you can't havea 5_000_000 array. Its just to much
+    mem: [u8; 1_000_000], 
 }
 
 impl Ram {
     pub fn new() -> Ram {
-        let mut ram = Ram { mem: [0; 5_000_000] };
+        let mut ram = Ram { mem: [0; 1_000_000] };
 
         // an example of preloading stuff into memeory
         let sprites: [[u8; 5]; 16] = [

@@ -5,11 +5,12 @@ use std::fmt;
 use std::time;
 
 pub struct Bus{
-    ram: Ram,
-    keyboard: Keyboard,
-    display: Display,
-    delay_timer: u8,
-    delay_timer_set_time: time::Instant,
+    ram:                    Ram,
+    keyboard:               Keyboard,
+    display:                Display,
+    delay_timer:            u8,
+    delay_timer_set_time:   time::Instant,
+    reg_bus:                u8, // this is the bus regitor
 }
 
 impl Bus {
@@ -20,6 +21,7 @@ impl Bus {
             display: Display::new(),
             delay_timer: 0,
             delay_timer_set_time: time::Instant::now(),
+            reg_bus:    0,
         }
     }
 
@@ -65,6 +67,10 @@ impl Bus {
 
     pub fn get_display_buffer(&self) -> &[u8] {
         self.display.get_display_buffer()
+    }
+
+    pub fn get_reg_bus(&self) -> u8 {
+        self.reg_bus
     }
 
 }
