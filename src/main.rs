@@ -19,7 +19,6 @@ use crate::chip::Chip;
 const WIDTH : usize = 640;
 const HEIGHT: usize = 320;
 
-
 fn main() {
     let args: Vec<String> = env::args().collect();
     let file_name = match args.len() {
@@ -48,6 +47,4 @@ fn main() {
     loop{
         chip.run_instruction();
     }
-
-
 }
